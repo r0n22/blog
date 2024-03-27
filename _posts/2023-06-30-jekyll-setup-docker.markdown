@@ -28,7 +28,7 @@ update:
     -it jekyll/jekyll:$(VERSION)  bundle update
 
 build: 
-	docker run --rm --volume="$(current_dir):/srv/jekyll:Z"s \
+	docker run --rm --volume="$(current_dir):/srv/jekyll:Z" \
     -it jekyll/jekyll:$(VERSION)  jekyll build
 
 serve:
