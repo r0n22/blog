@@ -14,4 +14,4 @@ build:
     {{base_command}} jekyll build
 
 serve:
-    {{base_command}} jekyll serve --watch
+    {{base_command}} jekyll serve --watch --future

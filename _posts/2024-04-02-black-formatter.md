@@ -2,7 +2,7 @@
 layout: post
 title: VS Code Black Formatter
 date: 2024-04-02 20:02
-category: Productivitiy
+category: productivity
 author: Cameron Regan
 tags: ['vscode','programming']
 summary: 
