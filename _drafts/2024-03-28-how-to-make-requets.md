@@ -1,5 +1,10 @@
 ---
 layout: post
+title: How to make requests 
+date: 2024-04-7 06:54
+category: management
+author: Cameron Regan
+tags: [management, productivity]
 title: How to make a request
 date: 2024-03-28 06:54
 category: management
