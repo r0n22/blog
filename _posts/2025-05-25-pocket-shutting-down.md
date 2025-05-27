@@ -18,11 +18,11 @@ This was unexpected for me.  I hope that [Kevin Rose does get to purchase](https
 
 ## Enter Wallabag
 
-I self host much of my own infrastructure, I have recently gone back to RSS for news reading to try to curb my time reading news and doom scrolling. After a non-exchastive search for open source pocket alternatives I landed on [Wallabag](https://wallabag.org/).  You can use their hosted version or self host.  I almost always go the self host route it was simple to get setup.
+I self host much of my own infrastructure, I have recently gone back to RSS for news reading to try to curb my time reading news and doom scrolling. After a non-exhaustive search for open source pocket alternatives I landed on [Wallabag](https://wallabag.org/).  You can use their hosted version or self host.  I almost always go the self host route it was simple to get setup.
 
 ## Docker
 
-Wallabag suggests that you install it directly on the server but my entire platform is dockerized which they do have a docker image for.  The docker instructions can be found on the [Docker Hub](https://hub.docker.com/r/wallabag/wallabag/) page.  My server setup is a single docker compose file so to start using Wallabag I added the following to my `docker-compose.yml` file.
+Wallabag suggests that you install it directly on the server but my entire platform is dockerize which they do have a docker image for.  The docker instructions can be found on the [Docker Hub](https://hub.docker.com/r/wallabag/wallabag/) page.  My server setup is a single docker compose file so to start using Wallabag I added the following to my `docker-compose.yml` file.
 
 ``` yaml
 services:
@@ -77,7 +77,7 @@ services:
 
 Couple things to note, if you do not get the `SYMFONY__ENV__SERVER_NAME` correct you will be able to login and have a functioning app but the stylesheets and images will not be working correctly.  If this happens make sure you remove the container and recreate it.  
 
-I keep all of my data in the local filesystem in seprate folders.  I created a folder `wallabag` to store the mysql and image storage and mapped them using volumes.
+I keep all of my data in the local filesystem in separate folders.  I created a folder `wallabag` to store the mysql and image storage and mapped them using volumes.
 
 Once everything is up and running you can log into the system using the default user `wallabag` with password `wallabag`.  I strongly suggest changing the default password.
 
@@ -87,11 +87,11 @@ This allowed me to login with my new user and create
 
 ![Wallabag view](/assets/images/blog/wallabag-view.png)
 
-This was great I was able to get access to the system localy.
+This was great I was able to get access to the system locally.
 
-## KoReader Intergration
+## KoReader Integration
 
-This was a great supprise that KoReader is able pull the articles directly from the Wallabag server and provide them as ePub files that you can read. I know that pocket used to be able to do this with Kobo but it seems that this was broken when Mozilla moved users over to Mozilla's own Single Sign On system.
+This was a great surprise that KoReader is able pull the articles directly from the Wallabag server and provide them as ePub files that you can read. I know that pocket used to be able to do this with Kobo but it seems that this was broken when Mozilla moved users over to Mozilla's own Single Sign On system.
 
 The configuration cannot be done within your reader you have to setup a setting file.  I am running this on a Kobo so your milage may very on other devices.
 
@@ -131,7 +131,7 @@ return {
 
 Everything was straight forward except the `directory` this was the location on my kobo which I want to have the articles downloaded to.  The issue was making sure I know how kobo mapped everything together.  I created a directory name `articles` on my sd card and found that my kobo mounts the sd card at `/mnt/sd/` so my directory was `/mnt/sd/articles/`.
 
-Once I got that everything worked great.  This allowed me to download the articles and read them on my kobo.  There is also a button which allows you to sync your progess with wallabag so you articles I have on my kobo finished show as finished on wallabag.
+Once I got that everything worked great.  This allowed me to download the articles and read them on my kobo.  There is also a button which allows you to sync your progress with wallabag so you articles I have on my kobo finished show as finished on wallabag.
 
 ## Great Start
 
